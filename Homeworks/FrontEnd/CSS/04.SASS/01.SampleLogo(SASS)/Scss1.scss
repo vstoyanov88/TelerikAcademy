@@ -1,0 +1,132 @@
+$black: 1px solid black;
+$white: white;
+$background: #9215f2; 
+@mixin linear-gradient($from,$to,$from-pos,$to-pos)
+{
+	background: #f0f9ff; /* Old browsers */
+	background: -moz-linear-gradient(top,   $from $from-pos, $to $to-pos); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop($from-pos,$from), color-stop($to-pos,$to)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,$from $from-pos,$to $to-pos); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  $from $from-pos,$to $to-pos); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  $from $from-pos,$to $to-pos); /* IE10+ */
+	background: linear-gradient(to bottom,  $from $from-pos,$to $to-pos); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$from}', endColorstr='#{$to}',GradientType=0 ); /* IE6-9 */
+
+}
+
+body
+{
+	@include linear-gradient(white,#9215f2,0%,100%);
+	color: $white;
+	a{
+		text-decoration: none;
+		color: $white;
+		&:hover{
+			text-decoration: underline;
+			color: yellow;
+		}
+	}
+	nav{
+	width: 75%;
+	margin-left: 20px;
+	h1{
+		float: left;
+	}
+	ul{
+		border: $black;
+		border-radius: 10px;
+		padding: 10px;
+		li{
+			display: inline-block;
+			padding: 0 10px;
+			& > ul  {
+				position: absolute;
+				display: none;
+					li{
+						display: block;
+					}
+				}
+			&:hover > ul {
+				display: block;
+				background: pink;
+			}
+		}
+	}
+}
+	#reg-form-container{
+		position: absolute;
+		right: 60px;
+		top: 30px;
+		input{
+			background: $background;
+			border-radius: 10px;
+			border: $black;
+		}
+		button{
+			background: $background;
+			border: $black;
+			border-top: $white;
+			border-left: $white;
+			border-radius: 5px;
+			color: $white;
+			padding: 5px 10px;
+		}
+	}
+	section{
+		float: left;
+		width: 75%;
+		margin-left: -10px;
+		font-size: 0.8em;
+		article{
+			border: $black;
+			border-radius: 10px;
+			padding: 10px;
+			margin: 20px;
+			h1{
+				font-size: 1.3em;
+				margin-bottom: -5px;
+			}
+			footer{
+				text-align: right;
+				margin-top: -5px;
+			}
+		}
+	}
+	aside{
+		float: left;
+		margin: 20px;
+		width: 25%;
+		position: absolute;
+		right: 20px;
+		font-size:  0.8em;
+		ul{
+			padding:10px;
+			li{
+				border: $black;
+				border-radius: 5px;
+				list-style-type: none;
+				margin: 15px;
+				padding: 10px;
+				h2{
+					margin-top: -5px;
+					margin-bottom: - 5px;
+				}
+				ul {
+					 li{
+						background: url(images/li-dot.png) 0px 3px no-repeat;
+						padding: 0; 
+						padding-left: 22px;
+						margin: 2px;
+						font-size: 0.9em;
+						border: 0;
+					}
+				}			
+			}
+		}
+	}
+	footer{
+		clear: both;
+		text-align: center;
+		margin: 20px;
+	}
+}

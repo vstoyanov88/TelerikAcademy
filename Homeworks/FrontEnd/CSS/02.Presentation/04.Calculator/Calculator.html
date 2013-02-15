@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Calculator</title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="calculator">
+        <img src="img\calculator.png" alt="Calculator" />
+        <div class="main">
+            <div class="span">
+                <strong>&nbsp
+                    <span class="underline">V</span>iew &nbsp&nbsp&nbsp
+                    <span class="underline">E</span>dit &nbsp&nbsp&nbsp
+                    <span class="underline">H</span>elp 
+                </strong>
+            </div>
+            <div>
+                <div class="form">
+                    <form>
+                        <input class="textarea" type="text" value="3454"/>
+                    </form>
+                </div>
+                <div class="binaryTable">
+                    <table>
+                        <tr>
+                            <td class="tdpadding">0000</td>
+                            <td class="tdpadding">0000</td>
+                            <td class="tdpadding">0000</td>
+                            <td class="tdpadding">0000</td>
+                            <td class="tdpadding">0000</td>
+                            <td class="tdpadding">0000</td>
+                            <td class="tdpadding">0000</td>
+                            <td class="tdpadding">0000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="tdpaddingGrey">63</td>
+                            <td colspan="3" class="tdpaddingGrey" >47</td>
+                            <td class="tdright">32</td>
+                        </tr>
+                        <tr>
+                            <td class="tdpadding">0000</td>
+                            <td class="tdpadding">0000</td>
+                            <td class="tdpadding">1000</td>
+                            <td class="tdpadding">0111</td>
+                            <td class="tdpadding">0001</td>
+                            <td class="tdpadding">1011</td>
+                            <td class="tdpadding">1011</td>
+                            <td class="tdpadding">0111</td></tr>
+                        <tr>
+                            <td colspan="4" class="tdpaddingGrey">31</td>
+                            <td colspan="3" class="tdpaddingGrey">15</td>
+                            <td class="tdright">0</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="numericalSystem">
+                    <form>
+                        <table class="numSysContent">
+                            <tr><td><input class="center" type="radio" value="Hex" name="NS" />Hex</td></tr>
+                            <tr><td><input type="radio" value="Dec" name="NS" checked />Dec</td></tr>
+                            <tr><td><input type="radio" value="Oct" name="NS" />Oct</td></tr>
+                            <tr><td><input type="radio" value="Bin" name="NS" />Bin</td></tr>
+                        </table>
+                    </form>
+                </div>
+                <div class="systemSize">
+                     <table class="systemSizeContent">
+                        <tr><td><input type="radio" value="Qword" name="WS" checked />Qword</td></tr>
+                        <tr><td><input type="radio" value="Dword" name="WS" />Dword</td></tr>
+                        <tr><td><input type="radio" value="Word" name="WS" />Word</td></tr>
+                        <tr><td><input type="radio" value="Byte" name="WS" />Byte</td></tr>
+                    </table>
+                </div>
+                <div class="keybord">
+                    <form>
+                        <table>
+                            <tr>
+                                <td><input class="blankbutton disabled" type="button" disabled /></td>
+                                <td><input class="button2 size" type="button" value="Mod" /></td>
+                                <td><input class="button2 size2 disabled" type="button" value="A" /></td>
+                                <td><input class="button2 size disabled" type="button" value="MC" /></td>
+                                <td><input class="button2 size disabled" type="button" value="MR" /></td>
+                                <td><input class="button2 size disabled" type="button" value="MS" /></td>
+                                <td><input class="button2 size disabled" type="button" value="M+" /></td>
+                                <td><input class="button2 size disabled" type="button" value="M-" /></td>
+                            </tr>
+                            <tr>
+                                <td><input class="button1 size" type="button" value="(" /></td>
+                                <td><input class="button1 size" type="button" value=")" /></td>
+                                <td><input class="button2 size2 disabled" type="button" value="B" disabled /></td>
+                                <td><input class="button1 size1" type="button" value="←" /></td>
+                                <td><input class="button1 size" type="button" value="CE" /></td>
+                                <td><input class="button1 size" type="button" value="C" /></td>
+                                <td><input class="button1 size" type="button" value="±" /></td>
+                                <td><input class="button2 disabled" type="button" value="√" disabled /></td>
+                            </tr>
+                            <tr>
+                                <td><input class="button1 size" type="button" value="RoL" /></td>
+                                <td><input class="button1 size" type="button" value="RoR" /></td>
+                                <td><input class="button2 size2 disabled" type="button" value="C" disabled /></td>
+                                <td><input class="button1 size3" type="button" value="7" /></td>
+                                <td><input class="button1 size3" type="button" value="8" /></td>
+                                <td><input class="button1 size3" type="button" value="9" /></td>
+                                <td><input class="button1 size1" type="button" value="/" /></td>
+                                <td><input class="button2 size2 disabled" type="button" value="%" disabled /></td>
+                            </tr>
+                            <tr>
+                                <td><input class="button1 size" type="button" value="Or" /></td>
+                                <td><input class="button1 size" type="button" value="Xor" /></td>
+                                <td><input class="button2 size2 disabled" type="button" value="D" disabled /></td>
+                                <td><input class="button1 size3" type="button" value="4" /></td>
+                                <td><input class="button1 size3" type="button" value="5" /></td>
+                                <td><input class="button1 size3" type="button" value="6" /></td>
+                                <td><input class="button1 size1" type="button" value="*" /></td>
+                                <td><input class="button2 size2 disabled" type="button" value="1/x" disabled /></td>
+                            </tr>
+                            <tr>
+                                <td><input class="button1 size" type="button" value="Lsh" /></td>
+                                <td><input class="button1 size" type="button" value="Rsh" /></td>
+                                <td><input class="button2 size2 disabled" type="button" value="E" disabled /></td>
+                                <td><input class="button1 size3" type="button" value="1" /></td>
+                                <td><input class="button1 size3" type="button" value="2" /></td>
+                                <td><input class="button1 size3" type="button" value="3" /></td>
+                                <td><input class="button1 size1" type="button" value="-" /></td>
+                                <td rowspan="2"><input class="button3" type="button" value="=" /></td>
+                            </tr>
+                            <tr>
+                                <td><button class="button1 size" type="button">Not</button></td>
+                                <td><input class="button1 size" type="button" value="And" /></td>
+                                <td><input class="button2 size2 disabled" type="button" value="F" disabled /></td>
+                                <td colspan="2"><input class="button4 size3" type="button" value="0" /></td>
+                                <td><input class="button2 disabled" type="button" value="," disabled /></td>
+                                <td><input class="button1 size1" type="button" value="+" /></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+table{
+	background-color: #595959;
+	font-family: sans-serif;
+	width: 350px;
+	text-align: left;
+} 	
+.header{
+	color: A9A9A9;
+	font: 25px Arial;
+}
+td, p{
+	padding: 10px;
+	vertical-align: top;
+}
+.dot{
+	vertical-align: middle;
+	height: 14px;
+	width: 14px;
+	border-radius: 50px;
+	background-color: #66CC99;
+	float: left;
+	margin-right: 5px;
+}
+.right{
+	text-align: right;
+}
+a:link{
+	color: #FFFFCC;
+	text-decoration: none;
+}
+a:visited{
+	color: #FFFFCC;
+}
+.grey {
+	color: A9A9A9;
+}
+.red_text{
+	color: red;
+}
+.orange{
+	color: #FF9900;
+}
+.white{
+	color: white;
+	font-style: italic;
+}

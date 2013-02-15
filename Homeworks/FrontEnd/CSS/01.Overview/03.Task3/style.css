@@ -1,0 +1,37 @@
+body{
+	background-color: #a9a9a9;
+}
+body > header{
+	text-align: center;
+	font-size: 25px;
+}
+h1{
+	color: #FFFFDB;
+}
+nav a{
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+	font-weight: bold;
+}
+ul {
+	list-style: none;
+}
+article header{
+	font-size: 25px;
+}
+article footer, a{
+	font-size: 13px;
+	color: #000;
+	text-decoration: none;
+}
+.current{
+	background-color: #d3d3d3;
+}
+.line{
+	text-decoration:underline;
+}
+.center{
+	text-align: center;
+}
+

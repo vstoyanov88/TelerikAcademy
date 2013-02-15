@@ -1,0 +1,41 @@
+table{
+	width: 45%;
+	font-size: 16px;
+	font-family: Arial;
+	border-collapse: collapse;
+}
+td{
+	padding: 7px;
+	border-left: 1px solid #595959;
+	border-right: 1px solid #595959;
+}
+.td1{
+    width: 30%;
+}
+.td2{
+    width: 25%;
+}
+.td3{
+    width: 25%;
+}
+.td4{
+    width: 20%;
+}
+thead{
+    background-color: #56b906;
+	color: white;
+	border: 1px solid #595959;
+}
+.grey{
+    background-color: #ececd8;
+}
+img{
+	height: 20px;
+	width: 25px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+tr:nth-child(4) td
+{
+	border-bottom: 1px solid #595959;
+}

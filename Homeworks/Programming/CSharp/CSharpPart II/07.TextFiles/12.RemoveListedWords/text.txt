@@ -1,0 +1,5 @@
+An array is a data structure that contains a number of variables of the same type.
+Arrays can have more than one dimension. For example, the following declaration creates 
+a two-dimensional array of four rows and two columns.
+A method is a code block containing a series of statements. In C#, every executed instruction 
+is done so in the context of a method

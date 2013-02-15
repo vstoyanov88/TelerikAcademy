@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>01.PersonalForm</title>
+    <style type="text/css">
+        th {text-align:right;}
+        tfoot { text-align:center;background-color:skyblue;}
+        .w300 {width:300px}
+        .wh {width:280px;height:80px;text-align:left;}
+        .w200 {width:200px;}
+        .w50 {width:50px;}
+        .w80 {width:80px;}
+        .w25 {width:25px;}
+    </style>
+</head>
+<body>
+    <form method="post">
+        <table border="1" cellspacing="0" cellpadding="3px">
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Submit" /><input type="reset" value="Clear This Form" />
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <th><label for="LN">Last Name</label></th>
+                    <td><input type="text" id="LN" class="w300" placeholder="Stoyanov" /></td>
+                </tr>
+                <tr>
+                    <th><label for="FN">First Name</label></th>
+                    <td><input type="text" id="FN" class="w300" placeholder="Veselin" /> </td>
+                </tr>
+                <tr>
+                    <th><label for="Adr">Address</label></th>
+                    <td><input type="text" id="Adr" class="wh" placeholder="in the middle of nowhere" /></td>
+                </tr>
+                <tr>
+                    <th><label for="City">City</label></th>
+                    <td>
+                        <table>
+                            <tr>
+                                <td><input type="text" id="City" class="w200" placeholder="Sofia"/></td>
+                                <td><label for="St">State</label></td>
+                                <td><input type="text" id="St" class="w50" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="Zip">Zip/Postal Code</label></th>
+                    <td><input type="text" id="Zip" class="w80" placeholder="1234"/></td>
+                </tr>
+                <tr>
+                    <th><label for="Country">Country</label></th>
+                    <td>
+                        <select name="coutry" id="Country">
+                        <option value="value1" selected="selected">Bulgaria</option>
+                        <option value="value2" selected="selected">Turkey</option>
+                        <option value="value3" selected="selected">Greece</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="phone">Phone (coutry code, area code, number></label></th>
+                    <td>(+<input type="text" id="phone" class="w50" placeholder="359"/>)<input type="text" class="w50" placeholder="88" />-<input type="text" placeholder="8888888" /></td>
+                </tr>
+                <tr>
+                    <th><label for="email">E-mail</label></th>
+                    <td><input id="email" type="email" required="required" placeholder="vstoyanov88@abv.bg" /></td>
+                </tr>
+                <tr>
+                    <th>Birth date</th>
+                    <td><label for="month">Month</label><input type="text" id="month" class="w25" placeholder="11" />
+                        <label for="day">Day</label><input type="text" id="day" class="w25" placeholder="12"/>
+                        <label for="year">Year(4 digit)</label><input type="text" id="year" class="w50" placeholder="1988" /></td>
+                </tr>
+                <tr>
+                    <th><label for="gender">Gender</label></th>
+                    <td>
+                        <select name="gender" id="gender">
+                            <option selected="selected">Male</option>
+                            <option selected="selected">Female</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Starting date</th>
+                    <td><input type="radio" name="Sdate" value="Autumn 2012" id="Autumn" /><label for="Autumn">Autumn 2012</label>
+                        <input type="radio" name="Sdate" value="Winter 2012" id="Winter" /><label for="Winter">Winter 2012</label></td>
+                </tr>
+                <tr>
+                    <th><label for="ComQs">Comments/Qustions</label></th>
+                    <td><input type="text" id="ComQs" class="wh" placeholder="Please send something" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

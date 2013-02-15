@@ -1,0 +1,22 @@
+body form ul {
+  list-style-type: none; }
+  body form ul li {
+    height: 200px;
+    width: 180px;
+    display: inline-block;
+    margin: 10px; }
+    body form ul li img {
+      height: 200px;
+      width: 180px; }
+body form #main input[type="radio"] {
+  display: none; }
+body form #main input[type="radio"]:checked + .img {
+  visibility: visible; }
+body form #main .img {
+  width: 700px;
+  height: 450px;
+  visibility: hidden;
+  display: inline-block;
+  position: absolute;
+  margin-left: 50px; }
+

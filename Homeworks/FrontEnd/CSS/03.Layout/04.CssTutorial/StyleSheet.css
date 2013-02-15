@@ -1,0 +1,131 @@
+﻿
+#frame {
+    border: 2px solid black;
+    background: #f1f1f1;
+    height: 800px;
+    width: 75%;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    color: #a1302e;
+}
+nav {
+    margin-left: -30px;
+    float:left;
+    font-size: 12px;
+    font-family: Georgia,"Times New Roman",Times,serif;
+}
+    nav header {
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+    nav ul li {
+        color: #a1302e;
+    }
+    nav a {
+        text-decoration: none;
+        color: #000;
+        padding-right: 200px;
+    }
+
+section {
+    background: white;
+    position: absolute;
+    border: 1px solid black;
+    width: 40%;
+    margin-left: 12%;
+    margin-right: 25%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 0 10px 40px 10px;
+}
+    section input {
+        background: white;
+        border: 1px solid #696969;
+        font-weight: bold;
+    }
+    .previous {
+        background: url(img/left.png) no-repeat;
+        padding-left: 29px;
+        padding-right: 29px;
+    }
+    .next {
+        background: url(img/right.png) no-repeat;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+article {
+    padding: 5px;
+}
+article header {
+    background: #808080;
+    color: white;
+    padding-left: 5px;
+}
+img {
+    float: left;
+    margin-top: 20px;
+}
+#home {
+    margin-top: -2px;
+    margin-left: -10px;
+    margin-right: 5px;
+}
+#footer {
+    margin-bottom: 10px;
+    margin-left: 100px;
+}
+
+aside {
+    text-align: center;
+	position: relative;
+	float: right;
+    right: 70px;
+    top: 8px;
+    font-family: Georgia,"Times New Roman",Times,serif;
+}
+    aside ul {
+        width: auto;
+	    margin: 2px;
+	    padding: 5px;
+	    border: 1px solid #696969;
+	    background-color: white
+    }
+        aside ul li {
+            margin: -2px;   
+        }
+    .aside-div {
+        border: 1px solid #696969;
+        background: white;
+        margin: 2px;
+    }
+    .aside-button {
+    
+        margin: 5px;
+    }
+    .head {
+        color: white;
+        background: #808080;
+        margin:0;
+    
+    }
+    .border {
+        border: 0;
+    }
+    #styles {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid black;
+        color: #45cefe;
+        background: #d5f0fe;
+        box-shadow: inset  #148eb0;
+    }
+
+hr {
+    height: 2px;
+    background-color: #b3b3b3;
+}
