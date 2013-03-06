@@ -1,0 +1,28 @@
+﻿<!--Write an expression that checks if given positive integer number n (n ≤ 100) is prime. E.g. 37 is prime.-->
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Is prime?</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var number = 26;
+        var x = 2;
+        var bool = true;
+        while(bool && (number > x))
+        {
+            if (number % x == 0)
+            {
+                bool = false;
+            }
+            x++;
+        }
+        jsConsole.writeLine(number + " is prime " + bool);
+    </script>
+</body>
+</html>

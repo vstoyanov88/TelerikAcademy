@@ -1,0 +1,33 @@
+﻿<!--Write an expression that checks for given point (x, y) if it is within the circle K( (1,1), 3) 
+    and out of the rectangle R(top=1, left=-1, width=6, height=2).-->
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Point int the circle2</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var x = 0;
+        var y = 0;
+        if ((x - 1) * (x - 1) + (y - 1)*(y - 1) <= 9) {
+            if ((x < (-1)) || (x > 5)) {
+                jsConsole.writeLine("the point is in the circle, outside the rectangle");
+            }
+            else if ((y < (-1)) || (y > 1)) {
+                jsConsole.writeLine("the point is the circle, outside the rectangle");
+            }
+            else {
+                jsConsole.writeLine("the point is the circle and the rectangle");
+            }
+        }
+        else {
+            jsConsole.writeLine("the point is outside the circle");
+        }
+    </script>
+</body>
+</html>

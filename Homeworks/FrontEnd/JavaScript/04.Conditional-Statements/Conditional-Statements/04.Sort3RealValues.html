@@ -1,0 +1,39 @@
+﻿<!--Sort 3 real values in descending order using nested if statements.-->
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sort Values</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var number1 = 3.3;
+        var number2 = 5;
+        var number3 = -2;
+        var temp;
+        jsConsole.writeLine(number1 + " " + number2 + " " + number3);
+        if (number1 > number2)
+        {
+            temp = number1;
+            number1 = number2;
+            number2 = temp;
+        }
+        if (number2 > number3)
+        {
+            temp = number2;
+            number2 = number3;
+            number3 = temp;
+        }
+        if (number1 > number2) {
+            temp = number1;
+            number1 = number2;
+            number2 = temp;
+        }
+        jsConsole.writeLine(number1 + " " + number2 + " " + number3);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿<!--Write a script that shows the sign (+ or -) of the product of three real numbers without calculating it. Use a sequence of if statements.-->
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Numbers Product</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var number1 = -1;
+        var number2 = -3;
+        var number3 = -4;
+        var count = 0;
+        if (number1 < 0)
+        {
+            count++;
+        }
+        if (number2 < 0)
+        {
+            count++
+        }
+        if (number3 < 0)
+        {
+            count++;
+        }
+        jsConsole.write("the sign of the product of the numbers is: ")
+        if (count % 2 == 0) {
+            jsConsole.writeLine("+");
+        }
+        else {
+            jsConsole.writeLine("-");
+        }
+    </script>
+</body>
+</html>

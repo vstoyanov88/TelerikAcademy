@@ -1,0 +1,129 @@
+﻿<!--Write a script that converts a number in the range [0...999] to a text corresponding to its English pronunciation. Examples:
+	0  "Zero"
+	273  "Two hundred seventy three"
+	400  "Four hundred"
+	501  "Five hundred and one"
+	711  "Seven hundred and eleven"-->
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Name the number</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+        a {
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <label for="number">Enter number</label>
+    <input type="text" id="number" />
+    <br />
+    <a href="#" onclick="getNumberName()">Get the name of the number</a>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function getNumberName()
+        {
+            var number = jsConsole.readInteger("#number");
+            if (number < 0 || number > 999) {
+                jsConsole.writeLine("wrong entry, try again");
+            }
+            else {
+                if (number <= 19 && number >= 0) {
+                    switch (number) {
+                        case 0: jsConsole.write("zero "); break;
+                        case 1: jsConsole.write("one "); break;
+                        case 2: jsConsole.write("two "); break;
+                        case 3: jsConsole.write("three "); break;
+                        case 4: jsConsole.write("four "); break;
+                        case 5: jsConsole.write("five "); break;
+                        case 6: jsConsole.write("six "); break;
+                        case 7: jsConsole.write("seven "); break;
+                        case 8: jsConsole.write("eight "); break;
+                        case 9: jsConsole.write("nine "); break;
+                        case 10: jsConsole.write("ten "); break;
+                        case 11: jsConsole.write("eleven "); break;
+                        case 12: jsConsole.write("twelve "); break;
+                        case 13: jsConsole.write("thirteen "); break;
+                        case 14: jsConsole.write("fourteen "); break;
+                        case 15: jsConsole.write("fifteen "); break;
+                        case 16: jsConsole.write("sixteen "); break;
+                        case 17: jsConsole.write("seventeen "); break;
+                        case 18: jsConsole.write("eighteen "); break;
+                        case 19: jsConsole.write("nineteen "); break;
+                        default: jsConsole.writeLine("invalid entry "); break;
+                    }
+                }
+                else if (number > 19 && number <= 999) {
+                    var digit = (Math.floor(number / 100)) % 10;
+                    switch (digit) {
+                        case 1: jsConsole.write("one hundred "); break;
+                        case 2: jsConsole.write("two hundred "); break;
+                        case 3: jsConsole.write("three hundred "); break;
+                        case 4: jsConsole.write("four hundred "); break;
+                        case 5: jsConsole.write("five hundred "); break;
+                        case 6: jsConsole.write("six  hundred "); break;
+                        case 7: jsConsole.write("seven hundred "); break;
+                        case 8: jsConsole.write("eight hundred "); break;
+                        case 9: jsConsole.write("nine hundred "); break;
+                    }
+                    digit = (Math.floor(number / 10)) % 10;
+                    if (digit > 1) {
+                        switch (digit) {
+                            case 2: jsConsole.write("twenty "); break;
+                            case 3: jsConsole.write("thirty "); break;
+                            case 4: jsConsole.write("fourty "); break;
+                            case 5: jsConsole.write("fifty "); break;
+                            case 6: jsConsole.write("sixty "); break;
+                            case 7: jsConsole.write("seventy "); break;
+                            case 8: jsConsole.write("eighty "); break;
+                            case 9: jsConsole.write("ninety "); break;
+                        }
+                        digit = number % 10;
+                        switch (digit) {
+                            case 1: jsConsole.write("one "); break;
+                            case 2: jsConsole.write("two "); break;
+                            case 3: jsConsole.write("three "); break;
+                            case 4: jsConsole.write("four "); break;
+                            case 5: jsConsole.write("five "); break;
+                            case 6: jsConsole.write("six "); break;
+                            case 7: jsConsole.write("seven "); break;
+                            case 8: jsConsole.write("eight "); break;
+                            case 9: jsConsole.write("nine "); break;
+                        }
+                    }
+                    else {
+                        digit = number % 10;
+                        digit = Math.floor(digit + (Math.floor((number / 10) % 10) * 10));
+                        switch (digit) {
+                            case 1: jsConsole.write(" and one "); break;
+                            case 2: jsConsole.write(" and two "); break;
+                            case 3: jsConsole.write(" and three "); break;
+                            case 4: jsConsole.write(" and four "); break;
+                            case 5: jsConsole.write(" and five "); break;
+                            case 6: jsConsole.write(" and six "); break;
+                            case 7: jsConsole.write(" and seven "); break;
+                            case 8: jsConsole.write(" and eight "); break;
+                            case 9: jsConsole.write(" and nine "); break;
+                            case 10: jsConsole.write(" and ten "); break;
+                            case 11: jsConsole.write(" and eleven "); break;
+                            case 12: jsConsole.write(" and twelve "); break;
+                            case 13: jsConsole.write(" and thirteen "); break;
+                            case 14: jsConsole.write(" and fourteen "); break;
+                            case 15: jsConsole.write(" and fifteen "); break;
+                            case 16: jsConsole.write(" and sixteen "); break;
+                            case 17: jsConsole.write(" and seventeen "); break;
+                            case 18: jsConsole.write(" and eighteen "); break;
+                            case 19: jsConsole.write(" and nineteen "); break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

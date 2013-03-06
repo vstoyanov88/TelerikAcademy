@@ -1,0 +1,57 @@
+﻿<!--Write a script that enters the coefficients a, b and c of a quadratic equation
+		a*x2 + b*x + c = 0
+		and calculates and prints its real roots. Note that quadratic equations may have 0, 1 or 2 real roots.-->
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Quadratic Equation</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+        a {
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div>Enter values for the equation: a*x^2 + b*x + c = 0</div>
+    <label for="a">Enter value for 'a':</label>
+    <input type="text" id="a" />
+    <br />
+    <label for="b">Enter value for 'b':</label>
+    <input type="text" id="b" />
+    <br />
+    <label for="c">Enter value for 'c':</label>
+    <input type="text" id="c" />
+    <br />
+    <a href="#" onclick="getCoefficients()">Get result</a>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function getCoefficients()
+        {
+            var a = jsConsole.readInteger("#a");
+            var b = jsConsole.readInteger("#b");
+            var c = jsConsole.readInteger("#c");
+            var d = (b * b) - (4 * a * c);
+            if (d < 0) {
+                jsConsole.writeLine("no roots")
+            }
+            else {
+                var root1 = (-b + Math.sqrt(d)) / 2 * a;
+                var root2 = (-b - Math.sqrt(d)) / 2 * a;
+                if (root1 == root2) {
+                    jsConsole.writeLine("the is one root: " + root1);
+                }
+                else {
+                    jsConsole.writeLine("root 1 :" + root1);
+                    jsConsole.writeLine("root 2 :" + root2);
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>
