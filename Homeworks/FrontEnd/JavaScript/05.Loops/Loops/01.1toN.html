@@ -1,0 +1,33 @@
+﻿
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Nubwer 1 to N</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Write a script that prints all the numbers from 1 to N</h1>
+    <label for="number">Enter value for N </label>
+    <input type="text" id="number" />
+    <br />
+    <a href="#" onclick="getOnetoN()">Get the number from 1 to N </a>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function getOnetoN()
+        {
+            var n = jsConsole.readInteger("#number");
+            for (var i = 1; i <= n; i++) {
+                jsConsole.write(i + " ")
+            }
+            jsConsole.writeLine()
+        }
+    </script>
+</body>
+</html>

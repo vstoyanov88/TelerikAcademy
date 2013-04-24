@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Reverse Digit</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+   <!-- Write a function that reverses the digits of given decimal number. Example: 256  652-->
+
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var number = 256;
+        ReverseNumber(number);
+        number = 4321;
+        ReverseNumber(number);
+
+        function ReverseNumber(number){
+            var reversedNumber = new Array();
+            var j = 0;
+            while (number > 0) {
+                reversedNumber[j]=(number % 10);
+                number = Math.floor(number / 10);
+                j++;
+            }
+            if (reversedNumber[0] != 0)
+            {
+                jsConsole.write(reversedNumber[0])
+            }
+            for (var i = 1; i < reversedNumber.length; i++) {
+                jsConsole.write(reversedNumber[i])
+            }
+            jsConsole.writeLine();
+        }
+    </script>
+</body>
+</html>

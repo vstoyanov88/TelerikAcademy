@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Word in text</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+  <!--  Write a function that finds all the occurrences of word in a text
+    The search can case sensitive or case insensitive
+    Use function overloading-->
+
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var text = "Text!Write a text function that finds all the occurrences of word in a text.";
+        var word = "text";
+        CountWordCaseSensitive(text, word);
+
+        CountWordCaseInsensitive(text, word);
+
+        function CountWordCaseSensitive(text, word) {
+            var count = 0;
+            var arr = text.split(/\W+/);
+            for (var i = 0; i < arr.length; i++) {
+                if (word == arr[i]){
+                    count++;
+                }
+            }
+            jsConsole.writeLine("Word \"" + word +"\" occurs " + count + " times in the text");
+        }
+
+        function CountWordCaseInsensitive(text, word) {
+            var count = 0;
+            var lower = text.toLocaleLowerCase();
+            var arr = lower.split(/\W+/);
+            for (var i = 0; i < arr.length; i++) {
+                if (word == arr[i]) {
+                    count++;
+                }
+            }
+            jsConsole.writeLine("Word \"" + word + "\" occurs " + count + " times in the text");
+        }
+    </script>
+</body>
+</html>

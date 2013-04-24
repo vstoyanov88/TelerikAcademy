@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sequence of elem</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Write a script that finds the maximal sequence of equal elements in an array.</h1>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var arr = [1, 1, 1, 1, 6, 2, 4, 8, 8, 8, 3, 4, 2, 3, 3, 2, 3, 3];
+        var count = 1;
+        var maxCount = count;
+        var end;
+        var start;
+        for (var i = 0; i < arr.length - 1; i++) {
+            if (arr[i] == arr[i + 1]) {
+                count += 1;
+                if (count > maxCount) {
+                    maxCount = count;
+                    end = i+1;
+                }
+            }
+            else {
+                count = 1;
+            }
+        }
+        jsConsole.writeLine(maxCount)
+        for (var i = end - maxCount+1; i <= end; i++) {
+            jsConsole.write(arr[i] + " ")
+        }
+       
+    </script>
+</body>
+</html>

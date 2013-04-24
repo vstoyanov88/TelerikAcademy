@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Max/Min</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Write a script that finds the max and min number from a sequence of numbers</h1>
+    <!--<label for="numbers">Enter numbers to conpare</label>
+    <input type="text" id="numbers" /> 
+    <a href="#" onclick="compareNumbers()">Compare numbers</a>-->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var numbers = [1, 4, 7, 2, 4, 9, 3, 5, 8, 3, 5, 3];
+        for (var i = 0; i < numbers.length; i++) {
+            jsConsole.write(numbers[i] + " ")
+        }
+        jsConsole.writeLine();
+
+        function orderBY(x, y) {
+            return x - y;
+        }
+        numbers.sort(orderBY);
+        jsConsole.writeLine("min: "+numbers[0])
+        jsConsole.writeLine("max: "+numbers[numbers.length-1])
+        //function compareNumbers()
+        //{
+        //    var numbers = new Array();
+        //    jsConsole.writeLine(numbers)
+        //    jsConsole.writeLine(numbers[1])
+        //}
+    </script>
+</body>
+</html>

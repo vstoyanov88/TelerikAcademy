@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Polindromes</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+   <!-- Write a program that extracts from a given text all palindromes, e.g. "ABBA", "lamal", "exe".-->
+
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function getPolindromes(str) {
+            var words = str.split( );
+            var result = buildStringBuilder();
+            for (var word in words) {
+                for (var i = 0; i < (word.Length / 2); i++){
+                    if (word[i] != word[word.Length - 1 - i]){
+                        break;
+                    }
+                    else{
+                        result.append(word).append(" ");
+                    }
+                }
+            }
+            return result;
+        }
+
+        function buildStringBuilder() {
+            return {
+                strs: [],
+                len: 0,
+                append: function (str) {
+                    this.strs[this.len++] = str;
+                    return this;
+                },
+                toString: function () {
+                    return this.strs.join("");
+                }
+            };
+        }
+
+        var text = "abba is not exe";
+        jsConsole.writeLine(text);
+        jsConsole.writeLine(getPolindromes(text));
+
+    </script>
+</body>
+</html>

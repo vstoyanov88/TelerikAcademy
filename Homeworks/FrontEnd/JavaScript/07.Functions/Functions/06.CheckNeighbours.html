@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bigger neighbours?</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <!--Write a function that checks if the element at given position in given array of integers is
+     bigger than its two neighbors (when such exist).-->
+
+
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var arr = [2, 5, 12, 89, 3, 52, 4, 7, 2, 4, 5, 8, 2, 5, 2, 4, 7, 2, 4, 7];
+        var position = 19;
+        CheckNeighbours(arr, position)
+        position = 4;
+        CheckNeighbours(arr, position)
+        position = 100;
+        CheckNeighbours(arr, position)
+
+        function CheckNeighbours(arr, position) {
+            if (position > arr.length - 1 || position < 0) {
+                jsConsole.writeLine("There si no element with index " + position + " in the array")
+            }
+            else {
+                if (position == 0) {
+                    if (arr[0] > arr[1]) {
+                        jsConsole.writeLine("Number at position " + position + " is bigger than its neighbour")
+                    }
+                    else { jsConsole.writeLine("Number at position " + position + " is NOT bigger than its neighbour") }
+                }
+                else if (position == arr.length - 1) {
+                    if (arr[arr.length - 1] > arr[arr.length - 2]) {
+                        jsConsole.writeLine("Number at position " + position + " is bigger than its neighbour")
+                    }
+                    else { jsConsole.writeLine("Number at position " + position + " is Not bigger than its neighbour") }
+                }
+                else {
+                    if (arr[position] > arr[position - 1] && arr[position] > arr[position + 1]) {
+                        jsConsole.writeLine("Number at position " + position + " is bigger than its neighbours")
+                    }
+                    else { jsConsole.writeLine("Number at position " + position + " is NOT bigger than its neighbours") }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

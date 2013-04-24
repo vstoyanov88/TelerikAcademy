@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DigitWord</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+   <!-- Write a function that returns the last digit of given integer as an English word. Examples: 512  "two", 1024  "four", 12309 --> "nine"
+   
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var number = 512;
+        GetLastDigit(number);
+        number = 3333;
+        GetLastDigit(number);
+
+        function GetLastDigit(number){
+            switch (number % 10)
+            {
+                case 0: jsConsole.writeLine("zero"); break;
+                case 1: jsConsole.writeLine("one"); break;
+                case 2: jsConsole.writeLine("two"); break;
+                case 3: jsConsole.writeLine("three"); break;
+                case 4: jsConsole.writeLine("four"); break;
+                case 5: jsConsole.writeLine("five"); break;
+                case 6: jsConsole.writeLine("six"); break;
+                case 7: jsConsole.writeLine("seven"); break;
+                case 8: jsConsole.writeLine("eight"); break;
+                case 9: jsConsole.writeLine("nine"); break;
+            }
+        }
+    </script>
+</body>
+</html>
